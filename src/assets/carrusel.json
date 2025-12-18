@@ -1,0 +1,40 @@
+{
+    "slides": [
+        {
+            "src": "Carrusel/001.jpg",
+            "alt": "001"
+        },
+        {
+            "src": "Carrusel/002.jpg",
+            "alt": "002"
+        },
+        {
+            "src": "Carrusel/003.jpg",
+            "alt": "003"
+        },
+        {
+            "src": "Carrusel/004.jpg",
+            "alt": "004"
+        },
+        {
+            "src": "Carrusel/005.jpg",
+            "alt": "005"
+        },
+        {
+            "src": "Carrusel/006.jpg",
+            "alt": "006"
+        },
+        {
+            "src": "Carrusel/007.png",
+            "alt": "007"
+        },
+        {
+            "src": "Carrusel/008.jpg",
+            "alt": "008"
+        },
+        {
+            "src": "Carrusel/009.jpg",
+            "alt": "009"
+        }
+    ]
+}
