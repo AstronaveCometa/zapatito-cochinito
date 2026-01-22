@@ -6,11 +6,16 @@ const Carrusel = ({ data }) => {
     const [slide, setSlide] = useState(0);
 
     useEffect(() => {
-        setTimeout(() => {
-            nextSlide();
+        let contador = 0;
+        setInterval(() => {
+            if (contador === data.length - 1) {
+                contador = 0;
+            }
+            setSlide(contador);
+            contador++;
         }, 5000);
     }, []);
-    
+
     const nextSlide = () => {
         setSlide(slide === data.length - 1 ? 0 : slide + 1);
     }
@@ -21,11 +26,11 @@ const Carrusel = ({ data }) => {
 
     return (
         <div className="carrusel">
-            <BsArrowLeftCircle className='arrow arrow-left' onClick={prevSlide}/>
+            <BsArrowLeftCircle className='arrow arrow-left' onClick={prevSlide} />
             {data.map((item, index) => (
-                <img key={index} src={item.src} alt={item.alt} className={slide === index ? 'slide' : 'slide slide-hidden'}/>
+                <img key={index} src={item.src} alt={item.alt} className={slide === index ? 'slide' : 'slide slide-hidden'} />
             ))}
-            <BsArrowRightCircle className='arrow arrow-right'onClick={nextSlide}/>
+            <BsArrowRightCircle className='arrow arrow-right' onClick={nextSlide} />
             <span className='indicators'>
                 {data.map((_, index) => (
                     <button key={index} onClick={null} className={slide === index ? 'indicator' : 'indicator indicator-inactive'}></button>
